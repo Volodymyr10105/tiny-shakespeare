@@ -65,4 +65,4 @@ https://wandb.ai/invest-ua1-self/transformer_decoder_only_final/runs/sav6fkg8
 wandb\run-20250514_013355-sav6fkg8\logs
 https://huggingface.co/invest-ua1/decoder-only-transformer-small
 Lizenz
-MIT © Volodymyr
+MIT © Volodymyr# decoder-only-transformer-small
