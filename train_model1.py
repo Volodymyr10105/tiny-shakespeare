@@ -1,8 +1,9 @@
 # %%
 
-import os
-from dotenv import load_dotenv
 
+from dotenv import load_dotenv
+load_dotenv()
+import os
 
 import torch
 import torch.nn as nn
@@ -23,7 +24,7 @@ epochs = 5
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Wandb
-wandb.login(key="fdae8f868f22a4f449868d697e17983889b0a9a5")
+wandb.login(key=os.getenv("WANDB_API_KEY"))
 wandb.init(project="transformer_decoder_only_final")
 
 # Tokenizer 
@@ -196,16 +197,14 @@ else:
 ##print(device)
 ##print(torch.cuda.memory_summary())
 #
-from huggingface_hub import login
-import os
-
-os.environ.pop("HF_TOKEN", None)
-os.environ.pop("HUGGING_FACE_HUB_TOKEN", None)
-
-
 # Einstellen schlussel
-token = "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"
-login(token=token)
+from huggingface_hub import login
+
+hf_token = os.getenv("HUGGINGFACE_TOKEN")
+if hf_token is None:
+    raise RuntimeError("HUGGINGFACE_TOKEN kein в .env")
+login(token=hf_token)
+
 
 
 #from transformers import AutoModel, AutoTokenizer
