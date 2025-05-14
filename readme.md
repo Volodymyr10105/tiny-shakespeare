@@ -66,3 +66,4 @@ wandb\run-20250514_013355-sav6fkg8\logs
 https://huggingface.co/invest-ua1/decoder-only-transformer-small
 Lizenz
 MIT © Volodymyr# decoder-only-transformer-small
+# decoder-only-transformer-small
