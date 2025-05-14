@@ -1,0 +1,19 @@
+# Secret
+.env
+
+# W&B logi
+wandb/
+
+# Kesh Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# System (bei macOS/Windows)
+.DS_Store
+Thumbs.db
